@@ -1,0 +1,157 @@
+/* Main Cart Container */
+.cart {
+    margin-top: 100px;
+}
+
+/* Cart Items Title */
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+    font-size: max(1.3vw, 12px);
+    font-weight: 500;
+}
+
+/* Cart Items */
+.cart-items-item {
+    margin: 10px 0;
+    color: black;
+}
+
+/* Product Image */
+.cart-items-item img {
+    width: 70px;
+}
+
+/* Styling for <hr> */
+.cart hr {
+    height: 1px;  /* Ensure it has a height */
+    background-color: #e2e2e2; /* Set visible color */
+    border: none;  /* Keep this */
+    width: 100%; /* Ensure it spans full width */
+    margin: 10px 0; /* Add spacing */
+}
+
+/* Remove Item Button */
+.cart-items-item .cross {
+    cursor: pointer;
+}
+
+/* Cart Bottom Section */
+.cart-bottom {
+    margin-top: 80px;
+    display: flex;
+    gap: max(12vw, 20px);
+}
+
+/* Cart Total Section */
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cart Total Details */
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+
+/* Cart Total HR Line */
+.cart-total hr {
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Checkout Button */
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: tomato;
+    width: max(15vw, 200px);
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Promo Code Section */
+.cart-promo-code {
+    flex: 1;
+}
+
+/* Promo Code Text */
+.cart-promo-code p {
+    color: #555;
+}
+
+/* Promo Code Input Box */
+.cart-promo-code-input {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Promo Code Input */
+.cart-promo-code-input input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    flex: 1; /* Allows the input to take remaining space */
+}
+
+/* Submit Button */
+.cart-promo-code-input button {
+    width: max(10vw, 150px);
+    padding: 10px 5px;
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media (max-width: 750px) {
+    /* Stack Cart Bottom Sections */
+    .cart-bottom {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    /* Center Promo Code Section */
+    .cart-promo-code {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Responsive Promo Code Input */
+    .cart-promo-code-input {
+        width: 90%;
+    }
+
+    /* Full Width Cart Total */
+    .cart-total {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Full Width Checkout Button */
+    .cart-total button {
+        width: 100%;
+    }
+}
